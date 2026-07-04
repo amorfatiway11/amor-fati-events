@@ -29,3 +29,7 @@ Create a free Formspree form and replace `YOUR-FORM-ID` in `index.html`.
 - `caviar.html` — dedicated Caviar Experience page
 
 - `florals.html` — dedicated Florals page
+
+- `catering.html` — dedicated Catering page
+- `styling.html` — dedicated Styling page
+- `rentals.html` — dedicated Rentals page
