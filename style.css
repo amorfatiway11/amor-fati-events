@@ -449,3 +449,30 @@ textarea {
     padding: 78px 6vw;
   }
 }
+
+
+/* Dedicated Caviar Experience Page */
+.caviar-hero {
+  background:
+    linear-gradient(rgba(0,0,0,0.26), rgba(0,0,0,0.48)),
+    url("https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=1800&q=80");
+  background-position: center;
+  background-size: cover;
+}
+.featured-menu p,
+.menu-card p { color: var(--muted); }
+.text-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.pairing-list { display: grid; gap: 18px; }
+.pairing-list div { border-top: 1px solid var(--line); padding-top: 24px; }
+.pairing-list p { color: var(--muted); }
+.caviar-one { background-image: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=900&q=80"); }
+.caviar-two { background-image: url("https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1000&q=80"); }
+.caviar-three { background-image: url("https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=900&q=80"); }
