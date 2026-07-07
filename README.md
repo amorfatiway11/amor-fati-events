@@ -33,3 +33,8 @@ Create a free Formspree form and replace `YOUR-FORM-ID` in `index.html`.
 - `catering.html` — dedicated Catering page
 - `styling.html` — dedicated Styling page
 - `rentals.html` — dedicated Rentals page
+
+## File Uploads
+The inquiry form includes an image upload field.
+
+If using Formspree, confirm your plan/form supports file attachments. If not, use a paid Formspree plan or connect the form to a custom Cloudflare Pages Function later.

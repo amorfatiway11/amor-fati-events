@@ -583,3 +583,12 @@ textarea {
   background-position: center;
   background-size: cover;
 }
+
+
+.form-note {
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+}
