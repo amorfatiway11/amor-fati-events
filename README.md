@@ -1,13 +1,13 @@
-# Amor Fati Events Clean Website
+# Amor Fati Events Website
 
-Upload all files and folders to GitHub exactly as included.
+This version embeds the caviar images directly into the code so the Caviar page will not break from missing image-folder paths.
 
-Important:
-- Do not skip the `assets` folder.
-- Caviar images live in `assets/images/`.
-- The inquiry form uses a Formspree placeholder: replace `YOUR-FORM-ID` in `index.html`.
+Upload all files to GitHub.
 
 Cloudflare Pages settings:
 - Framework preset: None
 - Build command: blank
 - Output directory: /
+
+Important:
+Replace `YOUR-FORM-ID` in `index.html` with your Formspree form ID when ready.
