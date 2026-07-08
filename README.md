@@ -1,13 +1,15 @@
-# Amor Fati Events Website
+# Amor Fati Events Static Optimized Website
 
-This version embeds the caviar images directly into the code so the Caviar page will not break from missing image-folder paths.
+This version uses normal static files and optimized WebP images.
 
-Upload all files to GitHub.
+Upload everything to GitHub exactly as included, including:
+- `assets/images/caviar-hero.webp`
+- `assets/images/caviar-service.webp`
+- `assets/images/martini-cart.webp`
 
-Cloudflare Pages settings:
+Cloudflare Pages:
 - Framework preset: None
 - Build command: blank
 - Output directory: /
 
-Important:
-Replace `YOUR-FORM-ID` in `index.html` with your Formspree form ID when ready.
+Replace `YOUR-FORM-ID` in `index.html` with your Formspree form ID.
