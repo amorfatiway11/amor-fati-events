@@ -1,40 +1,13 @@
-# Amor Fati Events Static Website
+# Amor Fati Events Clean Website
 
-This is a simple standalone website for Cloudflare Pages.
+Upload all files and folders to GitHub exactly as included.
 
-## Files
-- `index.html` — website content
-- `style.css` — design and layout
-- `script.js` — mobile menu and header effect
+Important:
+- Do not skip the `assets` folder.
+- Caviar images live in `assets/images/`.
+- The inquiry form uses a Formspree placeholder: replace `YOUR-FORM-ID` in `index.html`.
 
-## How to publish on Cloudflare Pages
-1. Create a GitHub repository.
-2. Upload these files to the repository.
-3. In Cloudflare, go to Workers & Pages.
-4. Create Application > Pages > Connect to Git.
-5. Choose your repository.
-6. Framework preset: None.
-7. Build command: leave blank.
-8. Output directory: `/`
-9. Deploy.
-10. Add your custom domain in Pages > Custom Domains.
-
-## Contact Form
-The form currently uses a placeholder:
-
-https://formspree.io/f/YOUR-FORM-ID
-
-Create a free Formspree form and replace `YOUR-FORM-ID` in `index.html`.
-
-- `caviar.html` — dedicated Caviar Experience page
-
-- `florals.html` — dedicated Florals page
-
-- `catering.html` — dedicated Catering page
-- `styling.html` — dedicated Styling page
-- `rentals.html` — dedicated Rentals page
-
-## File Uploads
-The inquiry form includes an image upload field.
-
-If using Formspree, confirm your plan/form supports file attachments. If not, use a paid Formspree plan or connect the form to a custom Cloudflare Pages Function later.
+Cloudflare Pages settings:
+- Framework preset: None
+- Build command: blank
+- Output directory: /
