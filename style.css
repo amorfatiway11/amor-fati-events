@@ -80,19 +80,48 @@ h3 { font-size: 1.65rem; margin-bottom: 12px; }
 .service-card-link:hover article { transform: translateY(-4px); background: var(--paper); border-color: rgba(155,122,77,.45); }
 .service-card-link span, .text-link { display:inline-block; margin-top:18px; color:var(--accent); text-transform:uppercase; letter-spacing:.11em; font-size:.75rem; font-weight:600; }
 
-.image-band { display:grid; grid-template-columns:1fr 1.3fr 1fr; gap:18px; padding:0 6vw 40px; }
-.image-card { min-height:500px; background-size:cover; background-position:center; }
-.card-one {
-    background-image: url("assets/images/charcuterie.jpeg");
+.image-band {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr;
+    gap: 18px;
+    padding: 0 6vw 40px;
 }
 
+.image-card {
+    min-height: 520px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform .35s ease;
+}
+
+.image-card:hover {
+    transform: scale(1.02);
+}
+
+/* Catering */
+
+.card-one {
+    background-image: url("assets/images/Charcuterie.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Celebration */
+
 .card-two {
-    background-image: url("assets/images/champagne-fountain.jpg");
+    background-image: url("assets/images/champagne fountain.jpg");
+    background-size: cover;
     background-position: center 30%;
 }
 
+/* Florals */
+
 .card-three {
-    background-image: url("assets/images/floral-table.jpeg");
+    background-image: url("assets/images/floral table.jpeg");
+    background-size: cover;
+    background-position: center;
 }
 .menus { background: var(--cream); }
 .menu-columns { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:40px; }
