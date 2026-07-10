@@ -183,7 +183,7 @@ h3 { font-size: 1.65rem; margin-bottom: 12px; }
 .caviar-bg.service {
     background-image: url("assets/images/caviar-flowers.jpeg");
     background-size: cover;
-    background-position: center;
+    background-position: center 25%;
     background-repeat: no-repeat;
 }
 .caviar-bg.martini { background-image: linear-gradient(rgba(0,0,0,.04), rgba(0,0,0,.04)), url("assets/images/martini-cart.webp"); }
