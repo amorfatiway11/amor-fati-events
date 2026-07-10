@@ -82,10 +82,18 @@ h3 { font-size: 1.65rem; margin-bottom: 12px; }
 
 .image-band { display:grid; grid-template-columns:1fr 1.3fr 1fr; gap:18px; padding:0 6vw 40px; }
 .image-card { min-height:500px; background-size:cover; background-position:center; }
-.card-one { background-image:url("https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=75"); }
-.card-two { background-image:url("https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1000&q=75"); }
-.card-three { background-image:url("https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=900&q=75"); }
+.card-one {
+    background-image: url("assets/images/charcuterie.jpeg");
+}
 
+.card-two {
+    background-image: url("assets/images/champagne-fountain.jpg");
+    background-position: center 30%;
+}
+
+.card-three {
+    background-image: url("assets/images/floral-table.jpeg");
+}
 .menus { background: var(--cream); }
 .menu-columns { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:40px; }
 .menu-card { background: var(--paper); padding:36px; }
