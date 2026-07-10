@@ -180,7 +180,12 @@ h3 { font-size: 1.65rem; margin-bottom: 12px; }
   background-size: cover;
   background-position: center;
 }
-.caviar-bg.service { background-image: linear-gradient(rgba(0,0,0,.02), rgba(0,0,0,.02)), url("assets/images/caviar-service.webp"); }
+.caviar-bg.service {
+    background-image: url("assets/images/caviar-flowers.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .caviar-bg.martini { background-image: linear-gradient(rgba(0,0,0,.04), rgba(0,0,0,.04)), url("assets/images/martini-cart.webp"); }
 
 .inquiry { background: var(--paper); }
