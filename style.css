@@ -42,7 +42,7 @@ img { max-width: 100%; display: block; }
             rgba(0,0,0,.42) 42%,
             rgba(0,0,0,.14) 100%
         ),
-        url("assets/images/caviar-hero.webp");
+        url("assets/images/catering-hero.jpg")
 
     background-size: cover;
     background-position: 58% center;
