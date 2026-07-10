@@ -125,7 +125,7 @@ h3 { font-size: 1.65rem; margin-bottom: 12px; }
 /* Celebration */
 
 .card-two {
-    background-image: url("assets/images/champagne fountain.jpg");
+    background-image: url("assets/images/champagne-fountain.jpg");
     background-size: cover;
     background-position: center 30%;
 }
@@ -133,7 +133,7 @@ h3 { font-size: 1.65rem; margin-bottom: 12px; }
 /* Florals */
 
 .card-three {
-    background-image: url("assets/images/floral table.jpeg");
+    background-image: url("assets/images/floral-table.jpeg");
     background-size: cover;
     background-position: center;
 }
