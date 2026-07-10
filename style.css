@@ -183,7 +183,12 @@ h3 { font-size: 1.65rem; margin-bottom: 12px; }
     background-position: center 25%;
     background-repeat: no-repeat;
 }
-.caviar-bg.martini { background-image: linear-gradient(rgba(0,0,0,.04), rgba(0,0,0,.04)), url("assets/images/martini-cart.webp"); }
+.caviar-bg.martini {
+    background-image: url("assets/images/martini-service.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .inquiry { background: var(--paper); }
 .inquiry-box { max-width:980px; margin:auto; padding:48px; }
