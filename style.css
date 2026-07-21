@@ -32,7 +32,7 @@ img { max-width: 100%; display: block; }
 .hero {
   min-height: 100vh; display: flex; align-items: center; padding: 120px 6vw 80px; color: var(--paper);
   background: linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.48)), url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=75");
-  background-position: center; background-size: cover;
+  background-position: center; background-size: cover;}
 .hero.caviar-hero {
 
     background:
