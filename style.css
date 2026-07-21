@@ -31,21 +31,24 @@ img { max-width: 100%; display: block; }
 
 .hero{
     position:relative;
-    overflow: hidden;
     min-height:100vh;
+    overflow:hidden;
 
     display:flex;
     align-items:center;
 
     background:
         linear-gradient(
-            rgba(15,15,15,.45),
-            rgba(15,15,15,.35)
+            rgba(0,0,0,.28),
+            rgba(0,0,0,.18)
         ),
         url("assets/images/hero-orchid.jpeg");
 
     background-size:cover;
-    background-position:center;
+
+    /* Show much more of the arrangement */
+    background-position:center 20%;
+
     background-repeat:no-repeat;
 }
 .hero.caviar-hero {
@@ -117,7 +120,15 @@ img { max-width: 100%; display: block; }
 }
 .hero.rentals-hero { background: linear-gradient(rgba(0,0,0,.22), rgba(0,0,0,.45)), url("https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1800&q=75"); background-position:center; background-size:cover; }
 
-.hero-content { max-width: 760px; position: relative; z-index: 2; }
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    max-width:720px;
+
+    padding-left:5vw;
+    padding-right:5vw;
+}
 .eyebrow, .section-kicker { text-transform: uppercase; letter-spacing: .18em; font-size: .78rem; color: var(--accent); font-weight: 600; }
 .hero .eyebrow { color: #e7d3b0; }
 h1,h2,h3 { font-family: "Cormorant Garamond", serif; line-height: 1; font-weight: 500; margin: 0; }
