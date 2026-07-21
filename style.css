@@ -192,61 +192,82 @@ h3 { font-size: 1.65rem; margin-bottom: 12px; }
    ABOUT
 ========================== */
 
-.about{
-    display:grid;
-    grid-template-columns:55% 45%;
-    gap:6rem;
+.about {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(3rem, 6vw, 7rem);
+  align-items: center;
 
-    padding:8rem 7vw;
+  padding: 8rem 7vw;
+  overflow: hidden;
 
-    background:#111;
-    color:#f8f5f0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(17, 16, 14, 0.94) 0%,
+      rgba(17, 16, 14, 0.86) 50%,
+      rgba(17, 16, 14, 0.72) 100%
+    ),
+    url("assets/images/about-background.jpg");
 
-    align-items:center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #fffdf8;
 }
 
-.about-left{
-    max-width:700px;
+.about-left,
+.about-right {
+  min-width: 0;
 }
 
-.about-right{
-    max-width:500px;
-    width:100%;
-    justify-self:end;
+.about-left {
+  max-width: 720px;
 }
 
-.about-left h2{
-    font-size:clamp(4rem,6vw,6rem);
-    line-height:.95;
-    margin-bottom:2rem;
+.about-right {
+  width: 100%;
+  max-width: 520px;
+  justify-self: end;
 }
 
-.about-intro{
-    max-width:580px;
-    font-size:1.3rem;
-    line-height:1.8;
-    color:#d8d2ca;
+.about-left h2 {
+  margin: 0 0 2rem;
+  font-size: clamp(3.8rem, 6vw, 6.3rem);
+  line-height: 0.95;
+  font-weight: 400;
 }
 
-.about-right p{
-    color:#d8d2ca;
-    line-height:2;
-    margin-bottom:2rem;
+.about-intro {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255, 253, 248, 0.84);
+  font-size: 1.25rem;
+  line-height: 1.8;
 }
 
-@media (max-width:900px){
+.about-right p {
+  margin: 0 0 2rem;
+  color: rgba(255, 253, 248, 0.82);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
 
-    .about{
-        grid-template-columns:1fr;
-        gap:3rem;
-        padding:6rem 6vw;
-    }
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 6rem 6vw;
+    background-position: center;
+  }
 
-    .about-right{
-        justify-self:start;
-        max-width:100%;
-    }
-
+  .about-right {
+    max-width: none;
+    justify-self: start;
+  }
 }
 /* Caviar page editorial image sections */
 .caviar-editorial {
