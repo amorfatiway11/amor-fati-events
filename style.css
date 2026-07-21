@@ -353,6 +353,21 @@ textarea { resize:vertical; }
   .caviar-bg{min-height:460px;} .caviar-panel{padding:48px 6vw;}
   .inquiry-box{padding:30px 22px;} h1{font-size:clamp(3.1rem,17vw,5rem);} .section{padding:78px 6vw;}
 }
+.service-image-card{
+    min-height: auto;
+    height: 260px;
+    margin-bottom: 0;
+}
+
+.service-image-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-grid{
+    gap: 18px;
+}
 /* Keep text readable on all hero images */
 
 .hero,
