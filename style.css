@@ -41,7 +41,7 @@ img { max-width: 100%; display: block; }
             rgba(15,15,15,.45),
             rgba(15,15,15,.35)
         ),
-        url("assets/images/hero-orchid.jpg");
+        url("assets/images/hero-orchid.jpeg");
 
     background-size:cover;
     background-position:center;
