@@ -29,10 +29,23 @@ img { max-width: 100%; display: block; }
 .nav-toggle { display: none; flex-direction: column; gap: 5px; border: 0; background: transparent; cursor: pointer; }
 .nav-toggle span { display: block; width: 25px; height: 1px; background: currentColor; }
 
-.hero {
-  min-height: 100vh; display: flex; align-items: center; padding: 120px 6vw 80px; color: var(--paper);
-  background: linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.48)), url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=75");
-  background-position: center; background-size: cover;
+.hero{
+    position:relative;
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    background:
+        linear-gradient(
+            rgba(15,15,15,.45),
+            rgba(15,15,15,.35)
+        ),
+        url("assets/images/hero-orchid.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 .hero.caviar-hero {
 
@@ -125,12 +138,43 @@ h3 { font-size: 1.65rem; margin-bottom: 12px; }
 
 .service-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
 .service-card-link { display:block; color:inherit; }
-.service-card-link article, .service-grid article, .menu-card, .inquiry-box { border:1px solid var(--line); background: var(--cream); }
+.service-card-link article,
+.service-grid article{
+    border:1px solid rgba(0,0,0,.08);
+    background:rgba(255,253,249,.82);
+    backdrop-filter:blur(10px);
+}
+
+.menu-card,
+.inquiry-box{
+    border:1px solid var(--line);
+    background:var(--cream);
+}
 .service-card-link article, .service-grid article { padding:34px; min-height:230px; height:100%; }
 .service-card-link article { transition: transform .25s ease, background .25s ease, border-color .25s ease; }
 .service-card-link:hover article { transform: translateY(-4px); background: var(--paper); border-color: rgba(155,122,77,.45); }
 .service-card-link span, .text-link { display:inline-block; margin-top:18px; color:var(--accent); text-transform:uppercase; letter-spacing:.11em; font-size:.75rem; font-weight:600; }
+/* ===========================
+   SERVICES BACKGROUND
+=========================== */
 
+#services{
+    position:relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(250,248,244,.96) 0%,
+            rgba(250,248,244,.90) 38%,
+            rgba(250,248,244,.65) 70%,
+            rgba(250,248,244,.30) 100%
+        ),
+        url("assets/images/Charcuterie.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
 .image-band {
     display: grid;
     grid-template-columns: 1fr 1.3fr 1fr;
