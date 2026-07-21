@@ -38,10 +38,10 @@ img { max-width: 100%; display: block; }
     align-items:center;
 
     background:
-        linear-gradient(
-            rgba(0,0,0,.28),
-            rgba(0,0,0,.18)
-        ),
+       linear-gradient(
+        rgba(0,0,0,.05),
+        rgba(0,0,0,.03)
+    ),
         url("assets/images/hero-orchid.jpeg");
 
     background-size:cover;
