@@ -22,6 +22,19 @@ img { max-width: 100%; display: block; }
   padding: 22px 6vw; color: var(--paper);
   transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
+.brand-group{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.brand-location{
+    font-size:.65rem;
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    color:#d8b37c;
+    font-weight:600;
+}
 .site-header.scrolled { background: rgba(255,253,248,.94); color: var(--charcoal); border-bottom: 1px solid var(--line); backdrop-filter: blur(14px); }
 .brand { font-family: "Cormorant Garamond", serif; text-transform: uppercase; letter-spacing: .2em; font-size: 1.35rem; font-weight: 600; }
 .site-nav { display: flex; align-items: center; gap: 22px; font-size: .76rem; text-transform: uppercase; letter-spacing: .12em; }
