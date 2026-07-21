@@ -44,6 +44,23 @@ img { max-width: 100%; display: block; }
   background-size: cover;
   background-repeat: no-repeat;
 }
+#services .services-intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-feature-image {
+  width: 88%;
+  margin-top: 46px;
+}
+
+.services-feature-image img {
+  display: block;
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  object-position: center;
+}
 .hero.caviar-hero {
 
     background:
