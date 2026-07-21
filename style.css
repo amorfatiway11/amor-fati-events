@@ -175,6 +175,19 @@ h3 { font-size: 1.65rem; margin-bottom: 12px; }
     background:var(--cream);
 }
 .service-card-link article, .service-grid article { padding:34px; min-height:230px; height:100%; }
+.service-image-card{
+    border:1px solid var(--line);
+    overflow:hidden;
+    background:var(--paper);
+    min-height:230px;
+}
+
+.service-image-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
 .service-card-link article { transition: transform .25s ease, background .25s ease, border-color .25s ease; }
 .service-card-link:hover article { transform: translateY(-4px); background: var(--paper); border-color: rgba(155,122,77,.45); }
 .service-card-link span, .text-link { display:inline-block; margin-top:18px; color:var(--accent); text-transform:uppercase; letter-spacing:.11em; font-size:.75rem; font-weight:600; }
