@@ -29,22 +29,15 @@ img { max-width: 100%; display: block; }
 .nav-toggle { display: none; flex-direction: column; gap: 5px; border: 0; background: transparent; cursor: pointer; }
 .nav-toggle span { display: block; width: 25px; height: 1px; background: currentColor; }
 
-.hero{
-    position:relative;
-    min-height:100vh;
-    overflow:hidden;
+.hero {
+    position: relative;
+    min-height: 100vh;
 
-    display:flex;
-    align-items:center;
-
- background:
-    linear-gradient(
-        rgba(0,0,0,.06),
-        rgba(0,0,0,.04)
-    ),
-    url("assets/images/hero-orchid.jpeg");
-
-background-position: center 18%;
+    background-image: url("assets/images/hero-orchid.jpeg");
+    background-size: cover;
+    background-position: center 18%;
+    background-repeat: no-repeat;
+}
     /* Show much more of the arrangement */
     background-position:center 18%;
 
