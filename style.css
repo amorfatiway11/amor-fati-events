@@ -45,9 +45,7 @@ img { max-width: 100%; display: block; }
   background-repeat: no-repeat;
 }
 
-.hero-content {
-  max-width: 760px;
-}
+
 #services .services-intro {
   display: flex;
   flex-direction: column;
@@ -184,22 +182,8 @@ h3 { font-size: 1.65rem; margin-bottom: 12px; }
    SERVICES BACKGROUND
 =========================== */
 
-#services{
-    position:relative;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(250,248,244,.96) 0%,
-            rgba(250,248,244,.90) 38%,
-            rgba(250,248,244,.65) 70%,
-            rgba(250,248,244,.30) 100%
-        ),
-        url("assets/images/Charcuterie.jpeg");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+#services {
+  background: var(--paper);
 }
 
 .menus { background: var(--cream); }
@@ -375,19 +359,8 @@ textarea { resize:vertical; }
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 760px;
+  max-width: 720px;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.68) 0%,
-    rgba(0, 0, 0, 0.42) 45%,
-    rgba(0, 0, 0, 0.12) 100%
-  );
-  z-index: 1;
-  pointer-events: none;
-}
