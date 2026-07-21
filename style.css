@@ -31,6 +31,7 @@ img { max-width: 100%; display: block; }
 
 .hero{
     position:relative;
+    overflow: hidden;
     min-height:100vh;
 
     display:flex;
@@ -329,4 +330,39 @@ textarea { resize:vertical; }
   .image-card,.gallery-item{min-height:320px;}
   .caviar-bg{min-height:460px;} .caviar-panel{padding:48px 6vw;}
   .inquiry-box{padding:30px 22px;} h1{font-size:clamp(3.1rem,17vw,5rem);} .section{padding:78px 6vw;}
+}
+/* Keep text readable on all hero images */
+
+.hero,
+.hero h1,
+.hero h2,
+.hero h3,
+.hero p,
+.hero .eyebrow,
+.hero .hero-text {
+  color: #fffdf8;
+}
+
+.hero .eyebrow {
+  color: #e7d3b0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.68) 0%,
+    rgba(0, 0, 0, 0.42) 45%,
+    rgba(0, 0, 0, 0.12) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
 }
