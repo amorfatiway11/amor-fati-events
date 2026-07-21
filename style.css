@@ -368,6 +368,10 @@ textarea { resize:vertical; }
 .service-grid{
     gap: 18px;
 }
+.image-band{
+    margin-top: 0;
+    padding-top: 0;
+}
 /* Keep text readable on all hero images */
 
 .hero,
