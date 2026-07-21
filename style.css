@@ -37,17 +37,16 @@ img { max-width: 100%; display: block; }
     display:flex;
     align-items:center;
 
-    background:
-       linear-gradient(
-        rgba(0,0,0,.05),
-        rgba(0,0,0,.03)
+ background:
+    linear-gradient(
+        rgba(0,0,0,.06),
+        rgba(0,0,0,.04)
     ),
-        url("assets/images/hero-orchid.jpeg");
+    url("assets/images/hero-orchid.jpeg");
 
-    background-size:cover;
-
+background-position: center 18%;
     /* Show much more of the arrangement */
-    background-position:center 20%;
+    background-position:center 18%;
 
     background-repeat:no-repeat;
 }
