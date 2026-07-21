@@ -192,52 +192,46 @@ h3 { font-size: 1.65rem; margin-bottom: 12px; }
    ABOUT
 ========================== */
 
-.about {
-    display: grid;
-    grid-template-columns: 58% 42%;
-    gap: 8rem;
+.about{
+    display:grid;
+    grid-template-columns:55% 45%;
+    gap:6rem;
 
-    background: #111;
-    color: #f8f5f0;
+    padding:8rem 7vw;
 
-    padding: 9rem 7vw;
-    align-items: end;
+    background:#111;
+    color:#f8f5f0;
+
+    align-items:center;
 }
 
-.about-left h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(4rem, 7vw, 6.6rem);
-    line-height: .95;
-    font-weight: 400;
-    margin: 0 0 2.5rem;
+.about-left{
+    max-width:700px;
 }
 
-.about-intro {
-    max-width: 620px;
-    margin: 0;
-
-    font-size: 1.35rem;
-    line-height: 1.8;
-    color: #d8d2ca;
+.about-right{
+    max-width:500px;
+    width:100%;
+    justify-self:end;
 }
 
-.about-right {
-    align-self: end;
-    justify-self: end;
-    max-width: 560px;
-    padding-bottom: .5rem;
+.about-left h2{
+    font-size:clamp(4rem,6vw,6rem);
+    line-height:.95;
+    margin-bottom:2rem;
 }
 
-.about-right p {
-    margin: 0 0 2rem;
-
-    font-size: 1.08rem;
-    line-height: 2;
-    color: #d8d2ca;
+.about-intro{
+    max-width:580px;
+    font-size:1.3rem;
+    line-height:1.8;
+    color:#d8d2ca;
 }
 
-.about-right p:last-child {
-    margin-bottom: 0;
+.about-right p{
+    color:#d8d2ca;
+    line-height:2;
+    margin-bottom:2rem;
 }
 
 @media (max-width:900px){
@@ -250,12 +244,9 @@ h3 { font-size: 1.65rem; margin-bottom: 12px; }
 
     .about-right{
         justify-self:start;
-        max-width:none;
+        max-width:100%;
     }
 
-    .about-left h2{
-        font-size:4rem;
-    }
 }
 /* Caviar page editorial image sections */
 .caviar-editorial {
