@@ -223,6 +223,9 @@ h3 { font-size: 1.65rem; margin-bottom: 12px; }
 
 .menus { background: var(--cream); }
 .menu-columns { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:40px; }
+.menu-columns{
+    grid-template-columns: repeat(2, 1fr);
+}
 .menu-card { background: var(--paper); padding:36px; }
 .menu-card p, .menu-card li { color: var(--muted); }
 .menu-card ul { padding-left:18px; }
