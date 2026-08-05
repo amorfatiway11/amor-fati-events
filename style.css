@@ -467,4 +467,33 @@ textarea { resize:vertical; }
   padding-left: 5vw;
   padding-right: 5vw;
 }
+/* Curate inquiry form */
 
+.curate-form-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.curate-form-wrapper iframe {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 1200px !important;
+  min-height: 1200px !important;
+  border: 0 !important;
+}
+
+@media (max-width: 860px) {
+  .curate-form-wrapper iframe {
+    height: 1500px !important;
+    min-height: 1500px !important;
+  }
+}
+.inquiry-box {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 48px;
+}
