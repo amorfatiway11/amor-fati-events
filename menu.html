@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu | Amor Fati Events</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --paper: #fffdf8;
+      --cream: #f8f3ea;
+      --charcoal: #1d1a17;
+      --muted: #746d64;
+      --line: rgba(29, 26, 23, 0.14);
+      --accent: #9b7a4d;
+      --dark: #11100e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--charcoal);
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 6vw;
+      color: var(--paper);
+      transition: 0.3s ease;
+    }
+
+    .site-header.scrolled {
+      background: rgba(255, 253, 248, 0.96);
+      color: var(--charcoal);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand {
+      font-family: "Cormorant Garamond", serif;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .nav-cta {
+      border: 1px solid currentColor;
+      padding: 10px 16px;
+    }
+
+    .hero {
+      min-height: 72vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 140px 7vw 80px;
+      color: white;
+      position: relative;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.60) 0%,
+          rgba(0,0,0,.32) 50%,
+          rgba(0,0,0,.12) 100%
+        ),
+        url("assets/images/catering-hero.jpg");
+
+      background-size: cover;
+      background-position: center 60%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .eyebrow,
+    .section-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .hero .eyebrow {
+      color: #e7d3b0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(4rem, 8vw, 8rem);
+      line-height: 0.94;
+      margin-top: 14px;
+    }
+
+    h2 {
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      line-height: 1;
+    }
+
+    h3 {
+      font-size: 1.65rem;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      max-width: 610px;
+      font-size: 1.06rem;
+      margin-top: 24px;
+      color: rgba(255,255,255,.88);
+    }
+
+    .menu-intro {
+      max-width: 920px;
+      margin: auto;
+      padding: 100px 7vw 55px;
+      text-align: center;
+    }
+
+    .menu-intro p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 700px;
+      margin: 24px auto 0;
+    }
+
+    .menu-section {
+      padding: 85px 7vw;
+    }
+
+    .menu-section:nth-child(even) {
+      background: var(--cream);
+    }
+
+    .section-heading {
+      max-width: 1400px;
+      margin: 0 auto 50px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+    }
+
+    .section-heading .section-kicker {
+      margin-bottom: 12px;
+    }
+
+    .menu-grid {
+      max-width: 1400px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 80px;
+      row-gap: 38px;
+    }
+
+    .menu-item {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 26px;
+    }
+
+    .menu-item h3 {
+      margin-bottom: 9px;
+    }
+
+    .menu-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .subsection-title {
+      max-width: 1400px;
+      margin: 50px auto 30px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.1rem;
+      font-weight: 500;
+    }
+
+    .site-footer {
+      background: var(--dark);
+      color: var(--paper);
+      text-align: center;
+      padding: 55px 6vw;
+    }
+
+    .site-footer p {
+      margin: 7px 0;
+    }
+
+    .small {
+      font-size: 0.82rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 900px) {
+      .site-nav {
+        gap: 10px;
+        font-size: 0.65rem;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+      }
+
+      .hero {
+        min-height: 65vh;
+        padding-left: 6vw;
+        padding-right: 6vw;
+      }
+
+      .menu-section {
+        padding: 70px 6vw;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .site-nav a:not(.nav-cta) {
+        display: none;
+      }
+
+      .brand {
+        font-size: 1.1rem;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header" id="header">
+  <a href="index.html" class="brand">Amor Fati</a>
+
+  <nav class="site-nav">
+    <a href="catering.html">Catering</a>
+    <a href="menu.html">Menu</a>
+    <a href="florals.html">Florals</a>
+    <a href="styling.html">Styling</a>
+    <a href="rentals.html">Rentals</a>
+    <a href="caviar.html">Caviar</a>
+    <a href="index.html#inquiry" class="nav-cta">Begin Planning</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">Amor Fati Events</p>
+    <h1>The Menu</h1>
+    <p>
+      Thoughtfully composed dishes for intimate dinners, cocktail receptions,
+      weddings, celebrations, and beautifully styled gatherings.
+    </p>
+  </div>
+</section>
+
+<section class="menu-intro">
+  <p class="section-kicker">Seasonal Catering</p>
+  <h2>Food made for gathering.</h2>
+  <p>
+    Our menus are designed around seasonality, beautiful presentation, and
+    thoughtful hospitality. Selections may be customized according to your
+    event, guest count, and service style.
+  </p>
+</section>
+
+<section class="menu-section">
+  <div class="section-heading">
+    <p class="section-kicker">01</p>
+    <h2>Appetizers</h2>
+  </div>
+
+  <h3 class="subsection-title">Passed Canapés</h3>
+
+  <div class="menu-grid">
+
+    <article class="menu-item">
+      <h3>Burrata & Roasted Tomato Spoon</h3>
+      <p>
+        Creamy burrata, slow-roasted tomatoes, basil oil, and aged balsamic.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Baked Tomato with Goat Cheese</h3>
+      <p>
+        Roasted tomato filled with whipped goat cheese, fresh herbs,
+        and finished with a baked quail egg.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Parmesan Herb Cremini Mushroom</h3>
+      <p>
+        Roasted cremini mushroom with Parmesan, garlic, herb butter,
+        and fresh herbs.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Smoked Salmon Mousse Tartlet</h3>
+      <p>
+        Silky smoked salmon mousse in a crisp butter tart shell.
+        Optional caviar enhancement.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Smoked Trout Mousse Tartlet</h3>
+      <p>
+        Smoked trout mousse with lemon, dill, and chives in a butter tart shell.
+        Optional ikura or caviar enhancement.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Avocado & Shrimp Spoon</h3>
+      <p>
+        Whipped avocado mousse, poached shrimp, citrus, micro herbs,
+        and chili oil.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Smoked Salmon Crostini</h3>
+      <p>
+        Artisan crostini with whipped herb cheese, smoked salmon,
+        cucumber, dill, and lemon zest.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Scallop en Coquille</h3>
+      <p>
+        Sea scallop baked in its shell with garlic-herb butter,
+        white wine, Parmesan, and breadcrumbs.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Mini Lobster Roll</h3>
+      <p>
+        Butter-poached lobster in toasted brioche with lemon-chive aioli.
+        Optional caviar enhancement.
+      </p>
+    </article>
+
+  </div>
+
+  <h3 class="subsection-title">English Tea Sandwich Collection</h3>
+
+  <div class="menu-grid">
+
+    <article class="menu-item">
+      <h3>Cheddar & Gruyère Tea Sandwich</h3>
+      <p>
+        Cheddar and Gruyère blended with cultured butter, Dijon mustard,
+        white wine vinegar, black pepper, and a hint of cayenne.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Egg, Caper & Herb Tea Sandwich</h3>
+      <p>
+        Egg, capers, fresh herbs, Dijon, and cucumber.
+      </p>
+    </article>
+
+  </div>
+
+  <h3 class="subsection-title">Warm Small Plates</h3>
+
+  <div class="menu-grid">
+
+    <article class="menu-item">
+      <h3>Roasted Bone Marrow</h3>
+      <p>
+        Roasted beef marrow with flaky sea salt, cracked pepper,
+        parsley, grilled artisan bread, and lemon.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Roasted Pear & Burrata</h3>
+      <p>
+        Warm roasted pear, whipped burrata, Prosciutto di Parma,
+        wildflower honey, pistachios, and thyme.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Caramelized Onion & Roast Beef Bruschetta</h3>
+      <p>
+        Grilled crostini with caramelized onions, roast beef,
+        horseradish crème fraîche, and microgreens.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<section class="menu-section">
+  <div class="section-heading">
+    <p class="section-kicker">02</p>
+    <h2>Displays & Sharing Boards</h2>
+  </div>
+
+  <div class="menu-grid">
+
+    <article class="menu-item">
+      <h3>Seasonal Fruit Display</h3>
+      <p>
+        A vibrant arrangement of hand-selected seasonal fruits,
+        fresh herbs, and edible flowers.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Garden Vegetable Crudités</h3>
+      <p>
+        Crisp seasonal vegetables with house-made classic
+        and roasted red pepper hummus.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Artisan Cheese Board</h3>
+      <p>
+        Imported and domestic cheeses with fresh and dried fruit,
+        honeycomb, preserves, Marcona almonds, crackers, and baguette.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Charcuterie & Cheese Board</h3>
+      <p>
+        Artisan cheeses, cured meats, fruit, olives, cornichons,
+        nuts, preserves, crackers, crostini, and rustic breads.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Six-Foot Grazing Table</h3>
+      <p>
+        An abundant styled presentation of cheeses, charcuterie,
+        seasonal fruit, vegetables, hummus, olives, preserves,
+        nuts, artisan breads, crackers, herbs, and edible flowers.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<section class="menu-section">
+  <div class="section-heading">
+    <p class="section-kicker">03</p>
+    <h2>Salads</h2>
+  </div>
+
+  <div class="menu-grid">
+
+    <article class="menu-item">
+      <h3>Warm Roasted Brussels Sprout Salad</h3>
+      <p>
+        Butter-roasted Brussels sprouts and shaved cabbage with roasted
+        chestnuts, crispy bacon, and warm Dijon vinaigrette.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Artichoke & Asparagus Salad</h3>
+      <p>
+        Tender asparagus and marinated artichoke hearts with lemon cream,
+        toasted almonds, fresh herbs, and lemon zest.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Classic Wedge Salad</h3>
+      <p>
+        Crisp iceberg lettuce, blue cheese dressing, bacon,
+        tomatoes, blue cheese crumbles, black pepper, and chives.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Classic Caesar Salad</h3>
+      <p>
+        Romaine hearts, garlic croutons, Parmigiano-Reggiano,
+        and traditional Caesar dressing.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Arugula & Blueberry Salad</h3>
+      <p>
+        Baby arugula, fresh blueberries, goat cheese,
+        toasted pecans, and citrus vinaigrette.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Harvest Pear Salad</h3>
+      <p>
+        Mixed greens, roasted pear, candied pecans, Gorgonzola,
+        dried cranberries, and champagne vinaigrette.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Burrata & Heirloom Tomato Salad</h3>
+      <p>
+        Burrata, heirloom tomatoes, basil, extra virgin olive oil,
+        flaky sea salt, and aged balsamic.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Roasted Beet Salad</h3>
+      <p>
+        Red and golden beets, whipped goat cheese, pistachios,
+        arugula, orange, and honey-citrus vinaigrette.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Spring Strawberry Salad</h3>
+      <p>
+        Baby spinach, strawberries, feta, almonds,
+        cucumber, mint, and champagne poppy seed vinaigrette.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Seasonal Mixed Greens</h3>
+      <p>
+        Seasonal lettuces, cucumber, radish, cherry tomatoes,
+        shaved carrots, and house vinaigrette.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<section class="menu-section">
+  <div class="section-heading">
+    <p class="section-kicker">04</p>
+    <h2>Entrées</h2>
+  </div>
+
+  <div class="menu-grid">
+
+    <article class="menu-item">
+      <h3>Sage & Lemon Butter Roasted Salmon</h3>
+      <p>
+        Fresh Atlantic salmon roasted with garlic, sage,
+        thyme, and lemon butter.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Miso-Glazed Black Cod</h3>
+      <p>
+        Black cod marinated in white miso, sake, mirin, and soy,
+        roasted until caramelized and finished with sesame and scallions.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Herb-Crusted Sea Bass</h3>
+      <p>
+        Pan-seared sea bass with panko, parsley, tarragon, dill,
+        lemon zest, Parmesan, butter, and lemon beurre blanc.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Herb & Pistachio Stuffed Roasted Chicken</h3>
+      <p>
+        Whole roasted chicken stuffed with pistachios, fresh herbs,
+        garlic, shallots, and citrus, served with pan jus.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Red Wine Braised Beef Short Ribs</h3>
+      <p>
+        Slow-braised beef short ribs with red wine, carrots,
+        onions, celery, garlic, and fresh herbs.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Herb-Crusted Rack of Lamb with Rosemary Jus</h3>
+      <p>
+        Rack of lamb with Dijon, rosemary, thyme, parsley,
+        garlic, panko, and rosemary jus.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<section class="menu-section">
+  <div class="section-heading">
+    <p class="section-kicker">05</p>
+    <h2>Accompaniments</h2>
+  </div>
+
+  <div class="menu-grid">
+
+    <article class="menu-item">
+      <h3>Truffle Mashed Potatoes</h3>
+      <p>
+        Yukon Gold potatoes whipped with butter, cream,
+        Parmesan, and black truffle.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Yukon Gold Mashed Potatoes</h3>
+      <p>
+        Whipped Yukon Gold potatoes with cultured butter,
+        cream, and roasted garlic.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Herb-Roasted Potatoes</h3>
+      <p>
+        Baby potatoes roasted with rosemary, thyme,
+        garlic, and olive oil.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Sautéed Shiitake Mushrooms</h3>
+      <p>
+        Shiitake mushrooms sautéed in garlic herb butter
+        and finished with thyme.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Truffle Shiitake Mushrooms</h3>
+      <p>
+        Shiitake mushrooms with shallots, butter,
+        thyme, Parmesan, and black truffle.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Baked Macaroni & Cheese</h3>
+      <p>
+        Cavatappi pasta with aged Cheddar, Gruyère,
+        Parmesan, and a crisp golden topping.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Roasted Seasonal Vegetables</h3>
+      <p>
+        Market vegetables roasted with olive oil,
+        garlic, and fresh herbs.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Grilled Asparagus with Lemon</h3>
+      <p>
+        Grilled asparagus with lemon zest,
+        cultured butter, and shaved Parmesan.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Honey-Glazed Rainbow Carrots</h3>
+      <p>
+        Roasted rainbow carrots with brown butter,
+        wildflower honey, and fresh thyme.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<section class="menu-section">
+  <div class="section-heading">
+    <p class="section-kicker">06</p>
+    <h2>Desserts</h2>
+  </div>
+
+  <div class="menu-grid">
+
+    <article class="menu-item">
+      <h3>Pavlova with Fresh Berries</h3>
+      <p>
+        Crisp meringue with a soft center, vanilla Chantilly cream,
+        fresh seasonal berries, and berry coulis.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Charlotte Russe</h3>
+      <p>
+        Delicate ladyfingers filled with vanilla Bavarian cream
+        and finished with fresh seasonal berries.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Lemon Bars</h3>
+      <p>
+        Buttery shortbread topped with bright lemon curd
+        and powdered sugar.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Classic Tiramisu</h3>
+      <p>
+        Espresso-soaked ladyfingers layered with mascarpone cream
+        and premium cocoa.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Mini Chocolate Ganache Cakes</h3>
+      <p>
+        Rich individual chocolate cakes finished with silky ganache
+        and fresh berries.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Seasonal Fruit Tartlets</h3>
+      <p>
+        Buttery pastry shells with vanilla pastry cream
+        and fresh seasonal fruit.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Crème Brûlée</h3>
+      <p>
+        Vanilla bean custard with a crisp caramelized sugar crust.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Mini Cheesecakes</h3>
+      <p>
+        Creamy vanilla cheesecake with seasonal fruit compote
+        or salted caramel.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>French Macarons</h3>
+      <p>
+        Delicate almond macarons in a rotating selection
+        of seasonal flavors.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Chocolate-Dipped Strawberries</h3>
+      <p>
+        Fresh strawberries hand-dipped in dark,
+        milk, or white chocolate.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<section class="menu-section">
+  <div class="section-heading">
+    <p class="section-kicker">07</p>
+    <h2>Flavored Butters</h2>
+  </div>
+
+  <div class="menu-grid">
+
+    <article class="menu-item">
+      <h3>Herb Butter</h3>
+      <p>
+        Sage, rosemary, oregano, garlic, parsley,
+        and cultured butter.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Orange Almond Butter</h3>
+      <p>
+        Orange zest, orange blossom water, toasted almonds,
+        honey, and cultured butter.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Anchovy Butter</h3>
+      <p>
+        Anchovies, garlic, parsley, lemon zest,
+        black pepper, and European-style butter.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Truffle Butter</h3>
+      <p>
+        Black truffle, Parmesan, fresh thyme,
+        and cultured butter.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Lemon Chive Butter</h3>
+      <p>
+        Lemon zest, fresh chives, parsley,
+        and flaky sea salt.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Roasted Garlic Butter</h3>
+      <p>
+        Slow-roasted garlic, parsley, thyme,
+        and cultured butter.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Brown Butter Sage</h3>
+      <p>
+        Nutty brown butter infused with crispy sage.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Chili Herb Butter</h3>
+      <p>
+        Roasted garlic, fresh herbs, Aleppo pepper,
+        and lemon zest.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Honey Herb Butter</h3>
+      <p>
+        Wildflower honey, thyme, flaky sea salt,
+        and whipped cultured butter.
+      </p>
+    </article>
+
+    <article class="menu-item">
+      <h3>Shallot & Tarragon Butter</h3>
+      <p>
+        Caramelized shallots, fresh tarragon,
+        white wine, and cultured butter.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p class="brand">Amor Fati</p>
+  <p>Catering · Styling · Florals · Rentals · Caviar Service</p>
+  <p class="small">Washington State</p>
+</footer>
+
+<script>
+  const header = document.getElementById("header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>
+
+</body>
+</html>
