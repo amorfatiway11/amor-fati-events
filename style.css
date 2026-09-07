@@ -500,3 +500,138 @@ textarea { resize:vertical; }
 #inquiry {
   scroll-margin-top: 100px;
 }
+/* Floral product cards */
+
+.floral-products {
+  background: var(--paper);
+}
+
+.floral-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 42px;
+}
+
+.floral-product-card {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.floral-product-card img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  display: block;
+}
+
+.floral-product-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.floral-product-content h3 {
+  margin-bottom: 8px;
+}
+
+.floral-product-content p {
+  color: var(--muted);
+}
+
+.floral-price {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  color: var(--charcoal) !important;
+  margin: 4px 0 12px;
+}
+
+.floral-product-content .button {
+  margin-top: auto;
+}
+
+
+/* Wedding set */
+
+.wedding-set-section {
+  background: var(--cream);
+}
+
+.wedding-set-intro {
+  max-width: 620px;
+  color: var(--muted);
+  margin-top: 18px;
+}
+
+.wedding-set-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 38px;
+}
+
+.wedding-option-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 36px;
+}
+
+.option-label {
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: .7rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.wedding-option-card ul {
+  margin: 24px 0 30px;
+  padding-left: 20px;
+}
+
+.wedding-option-card li {
+  margin-bottom: 8px;
+}
+
+
+/* Dark outline button */
+
+.button-outline-dark {
+  border: 1px solid var(--charcoal);
+  color: var(--charcoal);
+  background: transparent;
+}
+
+.button-outline-dark:hover {
+  background: var(--charcoal);
+  color: var(--paper);
+}
+
+
+/* Mobile */
+
+@media (max-width: 1000px) {
+
+  .floral-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .floral-product-grid,
+  .wedding-set-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .floral-product-card img {
+    height: 320px;
+  }
+
+}
