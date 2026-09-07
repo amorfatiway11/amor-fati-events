@@ -497,3 +497,6 @@ textarea { resize:vertical; }
   margin: auto;
   padding: 48px;
 }
+#inquiry {
+  scroll-margin-top: 100px;
+}
