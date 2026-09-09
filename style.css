@@ -715,3 +715,32 @@ textarea { resize:vertical; }
   line-height: 1.7;
   margin-bottom: 18px;
 }
+.catering-menu-link {
+  margin: 0 7vw 70px;
+  padding: 32px 36px;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background: var(--paper);
+}
+
+.catering-menu-link h3 {
+  font-size: 2rem;
+  margin: 5px 0 8px;
+}
+
+.catering-menu-link p {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (max-width: 700px) {
+  .catering-menu-link {
+    margin: 0 6vw 50px;
+    padding: 28px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
