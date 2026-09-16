@@ -765,34 +765,11 @@ textarea { resize:vertical; }
     ),
     url("assets/images/holiday-hero.jpg");
 
-  background-size: cover;
-  background-position: center;
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #11100e;
 }
-
-.holiday-hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 850px;
-}
-
-.holiday-hero .section-kicker {
-  color: #e7d3b0;
-}
-
-.holiday-hero h1 {
-  font-size: clamp(4rem, 8vw, 8rem);
-  line-height: 0.9;
-  margin-top: 12px;
-}
-
-.holiday-hero-description {
-  max-width: 620px;
-  margin: 28px 0 0;
-  font-size: 1.08rem;
-  color: rgba(255,255,255,.88);
-}
-
-
 /* HOLIDAY INTRO */
 
 .holiday-intro {
