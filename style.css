@@ -933,9 +933,11 @@ textarea { resize:vertical; }
 
 .workshop-image img {
   width: 100%;
-  min-height: 650px;
-  object-fit: cover;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
+
 
 .workshop-content {
   max-width: 560px;
