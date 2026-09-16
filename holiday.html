@@ -2,567 +2,34 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Holiday Specials | Amor Fati Events</title>
 
+  <meta
+    name="description"
+    content="Discover seasonal holiday experiences from Amor Fati Events, including The Holiday Caviar Table and our Caviar & Champagne Floral Workshop."
+  >
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
     rel="stylesheet"
-  />
+  >
 
-  <style>
-
-    /* =========================================
-       GLOBAL
-    ========================================= */
-
-    :root {
-      --paper: #fffdf8;
-      --cream: #f8f3ea;
-      --charcoal: #1d1a17;
-      --muted: #746d64;
-      --line: rgba(29, 26, 23, 0.14);
-      --accent: #9b7a4d;
-      --dark: #11100e;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--charcoal);
-      font-family: "Inter", sans-serif;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-    }
-
-    h1,
-    h2,
-    h3 {
-      margin: 0;
-      font-family: "Cormorant Garamond", serif;
-      font-weight: 500;
-    }
-
-    .section-kicker {
-      margin: 0 0 15px;
-      color: var(--accent);
-      font-size: 0.74rem;
-      font-weight: 600;
-      letter-spacing: 0.20em;
-      text-transform: uppercase;
-    }
-
-
-    /* =========================================
-       HEADER
-    ========================================= */
-
-    .site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-
-      width: 100%;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      padding: 22px 6vw;
-
-      color: var(--paper);
-
-      transition: 0.3s ease;
-    }
-
-    .site-header.scrolled {
-      background: rgba(255, 253, 248, 0.96);
-      color: var(--charcoal);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(14px);
-    }
-
-    .brand {
-      font-family: "Cormorant Garamond", serif;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-size: 1.35rem;
-      font-weight: 600;
-      white-space: nowrap;
-    }
-
-    .site-nav {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-
-      font-size: 0.70rem;
-      text-transform: uppercase;
-      letter-spacing: 0.11em;
-    }
-
-    .site-nav a {
-      transition: opacity 0.25s ease;
-    }
-
-    .site-nav a:hover {
-      opacity: 0.6;
-    }
-
-    .site-nav .active {
-      border-bottom: 1px solid currentColor;
-      padding-bottom: 4px;
-    }
-
-    .nav-cta {
-      border: 1px solid currentColor;
-      padding: 10px 15px;
-    }
-
-
-    /* =========================================
-       HERO
-    ========================================= */
-
-    .holiday-hero {
-      min-height: 78vh;
-
-      display: flex;
-      align-items: flex-end;
-
-      position: relative;
-
-      padding: 150px 7vw 85px;
-
-      color: white;
-
-      background:
-        linear-gradient(
-          90deg,
-          rgba(0,0,0,.62) 0%,
-          rgba(0,0,0,.38) 45%,
-          rgba(0,0,0,.12) 100%
-        ),
-        url("assets/images/Holiday.png");
-
-      background-size: cover;
-      background-position: center;
-    }
-
-    .holiday-hero-content {
-      position: relative;
-      z-index: 2;
-
-      max-width: 850px;
-    }
-
-    .holiday-hero .section-kicker {
-      color: #e7d3b0;
-    }
-
-    .holiday-hero h1 {
-      font-size: clamp(4rem, 8vw, 8rem);
-      line-height: 0.90;
-      margin-top: 12px;
-    }
-
-    .holiday-hero-description {
-      max-width: 620px;
-
-      margin: 28px 0 0;
-
-      font-size: 1.08rem;
-      color: rgba(255,255,255,.88);
-    }
-
-
-    /* =========================================
-       INTRO
-    ========================================= */
-
-    .holiday-intro {
-      max-width: 900px;
-      margin: auto;
-
-      padding: 100px 7vw;
-
-      text-align: center;
-    }
-
-    .holiday-intro h2 {
-      font-size: clamp(2.8rem, 5vw, 5rem);
-      line-height: 1;
-    }
-
-    .holiday-intro p:last-child {
-      max-width: 690px;
-
-      margin: 25px auto 0;
-
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-
-    /* =========================================
-       CAVIAR TABLE
-    ========================================= */
-
-    .caviar-special {
-      background: var(--cream);
-      padding: 110px 7vw;
-    }
-
-    .caviar-layout {
-      max-width: 1400px;
-      margin: auto;
-
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-
-      gap: 90px;
-      align-items: center;
-    }
-
-    .caviar-image img {
-      width: 100%;
-      aspect-ratio: 3 / 4;
-      object-fit: cover;
-    }
-
-    .caviar-content {
-      max-width: 600px;
-    }
-
-    .caviar-content h2 {
-      font-size: clamp(3.5rem, 6vw, 6.5rem);
-      line-height: 0.88;
-    }
-
-    .caviar-tagline {
-      margin: 25px 0 40px;
-
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-
-      font-size: 0.74rem;
-      font-weight: 500;
-    }
-
-
-    /* =========================================
-       MENU DETAILS
-    ========================================= */
-
-    .special-menu-group {
-      padding: 27px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .special-menu-group:last-of-type {
-      border-bottom: 1px solid var(--line);
-    }
-
-    .special-menu-group h3 {
-      margin-bottom: 12px;
-
-      font-size: 1.75rem;
-    }
-
-    .special-menu-group p {
-      margin: 0;
-
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .menu-item-small {
-      margin: 20px 0;
-    }
-
-    .menu-item-small strong {
-      display: block;
-
-      margin-bottom: 4px;
-
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.35rem;
-      font-weight: 500;
-
-      color: var(--charcoal);
-    }
-
-    .menu-item-small span {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-
-    /* =========================================
-       BUTTONS
-    ========================================= */
-
-    .holiday-button {
-      display: inline-block;
-
-      margin-top: 35px;
-      padding: 15px 27px;
-
-      border: 1px solid var(--charcoal);
-
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-
-      font-size: 0.72rem;
-
-      transition: 0.3s ease;
-    }
-
-    .holiday-button:hover {
-      background: var(--charcoal);
-      color: var(--paper);
-    }
-
-
-    /* =========================================
-       WORKSHOP
-    ========================================= */
-
-    .workshop-section {
-      padding: 120px 7vw;
-      background: var(--paper);
-    }
-
-    .workshop-layout {
-      max-width: 1400px;
-      margin: auto;
-
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-
-      gap: 90px;
-      align-items: center;
-    }
-
-    .workshop-image img {
-      width: 100%;
-      min-height: 650px;
-
-      object-fit: cover;
-    }
-
-    .workshop-content {
-      max-width: 560px;
-    }
-
-    .workshop-content h2 {
-      font-size: clamp(3.2rem, 5vw, 5.5rem);
-      line-height: 0.92;
-    }
-
-    .workshop-intro {
-      margin: 30px 0 20px;
-
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.5rem;
-      line-height: 1.45;
-    }
-
-    .workshop-description {
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-
-    /* =========================================
-       FINAL CTA
-    ========================================= */
-
-    .holiday-cta {
-      padding: 110px 7vw;
-
-      text-align: center;
-
-      background: var(--dark);
-      color: var(--paper);
-    }
-
-    .holiday-cta .section-kicker {
-      color: #e7d3b0;
-    }
-
-    .holiday-cta h2 {
-      max-width: 800px;
-
-      margin: auto;
-
-      font-size: clamp(3rem, 5vw, 5rem);
-      line-height: 1;
-    }
-
-    .holiday-cta p {
-      max-width: 600px;
-
-      margin: 25px auto 0;
-
-      color: rgba(255,255,255,.72);
-    }
-
-    .holiday-cta .holiday-button {
-      border-color: var(--paper);
-    }
-
-    .holiday-cta .holiday-button:hover {
-      background: var(--paper);
-      color: var(--dark);
-    }
-
-
-    /* =========================================
-       FOOTER
-    ========================================= */
-
-    .site-footer {
-      background: var(--dark);
-      color: var(--paper);
-
-      border-top: 1px solid rgba(255,255,255,.12);
-
-      text-align: center;
-
-      padding: 55px 6vw;
-    }
-
-    .site-footer p {
-      margin: 7px 0;
-    }
-
-    .small {
-      font-size: 0.82rem;
-      opacity: 0.7;
-    }
-
-
-    /* =========================================
-       MOBILE
-    ========================================= */
-
-    @media (max-width: 1100px) {
-
-      .site-nav {
-        gap: 12px;
-        font-size: 0.62rem;
-      }
-
-    }
-
-
-    @media (max-width: 900px) {
-
-      .caviar-layout,
-      .workshop-layout {
-        grid-template-columns: 1fr;
-        gap: 55px;
-      }
-
-      .caviar-content,
-      .workshop-content {
-        max-width: 100%;
-      }
-
-      .caviar-image {
-        max-width: 650px;
-        margin: auto;
-      }
-
-      .workshop-image img {
-        min-height: auto;
-      }
-
-      .site-nav a:not(.nav-cta) {
-        display: none;
-      }
-
-    }
-
-
-    @media (max-width: 600px) {
-
-      .site-header {
-        padding: 18px 5vw;
-      }
-
-      .brand {
-        font-size: 1.05rem;
-      }
-
-      .nav-cta {
-        padding: 8px 11px;
-        font-size: 0.60rem;
-      }
-
-      .holiday-hero {
-        min-height: 70vh;
-
-        padding:
-          130px
-          6vw
-          60px;
-      }
-
-      .holiday-hero h1 {
-        font-size: 4rem;
-      }
-
-      .holiday-intro,
-      .caviar-special,
-      .workshop-section,
-      .holiday-cta {
-        padding-left: 6vw;
-        padding-right: 6vw;
-      }
-
-      .caviar-special,
-      .workshop-section {
-        padding-top: 75px;
-        padding-bottom: 75px;
-      }
-
-      .caviar-content h2 {
-        font-size: 3.7rem;
-      }
-
-      .workshop-content h2 {
-        font-size: 3.5rem;
-      }
-
-    }
-
-  </style>
+  <!-- Main Website Styles -->
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -570,370 +37,511 @@
 <body>
 
 
-  <!-- =========================================
-       HEADER
-  ========================================== -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-  <header class="site-header" id="header">
+<header class="site-header" id="header">
 
-    <a href="index.html" class="brand">
-      Amor Fati
+  <a href="index.html" class="brand">
+    Amor Fati
+  </a>
+
+
+  <nav class="site-nav">
+
+    <a href="catering.html">
+      Catering
     </a>
 
-    <nav class="site-nav">
-
-      <a href="catering.html">Catering</a>
-
-      <a href="menu.html">Menu</a>
-
-      <a href="florals.html">Florals</a>
-
-      <a href="styling.html">Styling</a>
-
-      <a href="rentals.html">Rentals</a>
-
-      <a href="caviar.html">Caviar</a>
-
-      <a href="holiday.html" class="active">
-        Holiday Specials
-      </a>
-
-      <a href="index.html#inquiry" class="nav-cta">
-        Begin Planning
-      </a>
-
-    </nav>
-
-  </header>
-
-
-  <!-- =========================================
-       HERO
-  ========================================== -->
-
-  <section class="holiday-hero">
-
-    <div class="holiday-hero-content">
-
-      <p class="section-kicker">
-        Amor Fati Events
-      </p>
-
-      <h1>
-        Holiday<br>
-        Specials
-      </h1>
-
-      <p class="holiday-hero-description">
-        Seasonal experiences created for beautiful gatherings,
-        intimate celebrations, and unforgettable holiday tables.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================================
-       INTRO
-  ========================================== -->
-
-  <section class="holiday-intro">
-
-    <p class="section-kicker">
-      The Holiday Collection
-    </p>
-
-    <h2>
-      Celebrate beautifully.
-    </h2>
-
-    <p>
-      From caviar and curated cocktail bites to seasonal florals,
-      Amor Fati brings food, presentation, and atmosphere together
-      for holiday entertaining.
-    </p>
-
-  </section>
-
-
-  <!-- =========================================
-       HOLIDAY CAVIAR TABLE
-  ========================================== -->
-
-  <section class="caviar-special">
-
-    <div class="caviar-layout">
-
-
-      <!-- IMAGE -->
-
-      <div class="caviar-image">
-
-        <img
-          src="assets/images/Holiday.png"
-          alt="Amor Fati Holiday Caviar Table"
-        >
-
-      </div>
-
-
-      <!-- CONTENT -->
-
-      <div class="caviar-content">
-
-        <p class="section-kicker">
-          Seasonal Offering
-        </p>
-
-        <h2>
-          The Holiday<br>
-          Caviar Table
-        </h2>
-
-        <p class="caviar-tagline">
-          Caviar · Cocktail Bites · Florals
-        </p>
-
-
-        <!-- CAVIAR -->
-
-        <div class="special-menu-group">
-
-          <h3>
-            Kaluga Caviar — 22 oz
-          </h3>
-
-          <p>
-            Presented with blinis, crème fraîche, chives,
-            shallots, egg yolk &amp; egg white,
-            toasted croûtes, and potato chips.
-          </p>
-
-        </div>
-
-
-        <!-- COCKTAIL BITES -->
-
-        <div class="special-menu-group">
-
-          <h3>
-            Cocktail Bites
-          </h3>
-
-
-          <div class="menu-item-small">
-
-            <strong>
-              Mini Lobster Rolls
-            </strong>
-
-            <span>
-              Butter-poached lobster, toasted brioche,
-              lemon-chive aioli.
-            </span>
-
-          </div>
-
-
-          <div class="menu-item-small">
-
-            <strong>
-              Mini Crab Cakes
-            </strong>
-
-            <span>
-              Golden crab cakes with lemon herb aioli.
-            </span>
-
-          </div>
-
-
-          <div class="menu-item-small">
-
-            <strong>
-              Crispy Rice with Tuna Tartare
-            </strong>
-
-            <span>
-              Avocado, sesame, jalapeño,
-              and spicy aioli.
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- FLORALS -->
-
-        <div class="special-menu-group">
-
-          <h3>
-            Holiday Florals
-          </h3>
-
-          <p>
-            A seasonal floral arrangement designed to complement
-            the caviar presentation and create a beautifully
-            finished holiday table.
-          </p>
-
-        </div>
-
-
-        <a
-          href="index.html#inquiry"
-          class="holiday-button"
-        >
-          Request This Experience
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================================
-       CAVIAR & CHAMPAGNE WORKSHOP
-  ========================================== -->
-
-  <section class="workshop-section">
-
-    <div class="workshop-layout">
-
-
-      <!-- CONTENT -->
-
-      <div class="workshop-content">
-
-        <p class="section-kicker">
-          Holiday Workshop
-        </p>
-
-        <h2>
-          Caviar &amp;<br>
-          Champagne<br>
-          Floral Workshop
-        </h2>
-
-        <p class="workshop-intro">
-          Flowers, caviar, champagne, and an evening
-          created around the art of gathering.
-        </p>
-
-        <p class="workshop-description">
-          Join Amor Fati Events for a holiday flower arrangement
-          workshop accompanied by caviar and champagne.
-          Create your own seasonal floral arrangement while
-          enjoying an elevated holiday experience in a beautifully
-          styled setting.
-        </p>
-
-
-        <a
-          href="https://www.eventbrite.com/e/holiday-flower-arrangement-workshop-with-caviar-and-champagne-tickets-1998936129774?aff=oddtdtcreator"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="holiday-button"
-        >
-          Reserve Your Seat
-        </a>
-
-      </div>
-
-
-      <!-- IMAGE -->
-
-      <div class="workshop-image">
-
-        <img
-          src="assets/images/Caviar and Champagne.png"
-          alt="Caviar and Champagne Holiday Floral Workshop"
-        >
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================================
-       FINAL CTA
-  ========================================== -->
-
-  <section class="holiday-cta">
-
-    <p class="section-kicker">
-      Holiday Entertaining
-    </p>
-
-    <h2>
-      Make the gathering part of the celebration.
-    </h2>
-
-    <p>
-      Planning a private holiday dinner, cocktail party,
-      or seasonal celebration? Tell us what you have in mind.
-    </p>
-
-    <a
-      href="index.html#inquiry"
-      class="holiday-button"
-    >
+    <a href="menu.html">
+      Menu
+    </a>
+
+    <a href="florals.html">
+      Florals
+    </a>
+
+    <a href="styling.html">
+      Styling
+    </a>
+
+    <a href="rentals.html">
+      Rentals
+    </a>
+
+    <a href="caviar.html">
+      Caviar
+    </a>
+
+    <a href="holiday.html" class="active">
+      Holiday Specials
+    </a>
+
+    <a href="index.html#inquiry" class="nav-cta">
       Begin Planning
     </a>
 
-  </section>
+  </nav>
+
+</header>
 
 
-  <!-- =========================================
-       FOOTER
-  ========================================== -->
 
-  <footer class="site-footer">
+<!-- =====================================================
+     HOLIDAY HERO
+===================================================== -->
 
-    <p class="brand">
-      Amor Fati
+<section class="holiday-hero">
+
+  <div class="holiday-hero-content">
+
+    <p class="section-kicker">
+      Amor Fati Events
     </p>
 
-    <p>
-      Catering · Styling · Florals · Rentals · Caviar Service
+    <h1>
+      Holiday<br>
+      Specials
+    </h1>
+
+    <p class="holiday-hero-description">
+      Seasonal experiences created for beautiful gatherings,
+      intimate celebrations, and unforgettable holiday tables.
     </p>
 
-    <p class="small">
-      Washington State
-    </p>
+  </div>
 
-  </footer>
+</section>
 
 
-  <!-- =========================================
-       HEADER SCROLL
-  ========================================== -->
 
-  <script>
+<!-- =====================================================
+     HOLIDAY INTRODUCTION
+===================================================== -->
 
-    const header = document.getElementById("header");
+<section class="holiday-intro">
 
-    window.addEventListener("scroll", () => {
+  <p class="section-kicker">
+    The Holiday Collection
+  </p>
 
-      if (window.scrollY > 50) {
+  <h2>
+    Celebrate beautifully.
+  </h2>
 
-        header.classList.add("scrolled");
+  <p>
+    From caviar and curated cocktail bites to seasonal florals,
+    Amor Fati brings food, presentation, and atmosphere together
+    for holiday entertaining.
+  </p>
 
-      } else {
+</section>
 
-        header.classList.remove("scrolled");
 
-      }
 
-    });
+<!-- =====================================================
+     THE HOLIDAY CAVIAR TABLE
+===================================================== -->
 
-  </script>
+<section class="caviar-special">
+
+  <div class="caviar-layout">
+
+
+    <!-- CAVIAR TABLE IMAGE -->
+
+    <div class="caviar-image">
+
+      <img
+        src="assets/images/Holiday.png"
+        alt="Holiday Caviar Table by Amor Fati Events"
+      >
+
+    </div>
+
+
+
+    <!-- CAVIAR TABLE CONTENT -->
+
+    <div class="caviar-content">
+
+      <p class="section-kicker">
+        Seasonal Offering
+      </p>
+
+      <h2>
+        The Holiday<br>
+        Caviar Table
+      </h2>
+
+      <p class="caviar-tagline">
+        Caviar · Cocktail Bites · Florals
+      </p>
+
+
+
+      <!-- CAVIAR SERVICE -->
+
+      <div class="special-menu-group">
+
+        <h3>
+          Kaluga Caviar — 22 oz
+        </h3>
+
+        <p>
+          Presented over ice with blinis, crème fraîche,
+          chives, shallots, egg yolk &amp; egg white,
+          toasted croûtes, and potato chips.
+        </p>
+
+      </div>
+
+
+
+      <!-- APPETIZERS -->
+
+      <div class="special-menu-group">
+
+        <h3>
+          Cocktail Bites
+        </h3>
+
+
+        <div class="menu-item-small">
+
+          <strong>
+            Mini Lobster Rolls
+          </strong>
+
+          <span>
+            Butter-poached lobster in toasted brioche
+            with lemon-chive aioli.
+          </span>
+
+        </div>
+
+
+        <div class="menu-item-small">
+
+          <strong>
+            Mini Crab Cakes
+          </strong>
+
+          <span>
+            Golden crab cakes with lemon herb aioli
+            and fresh herbs.
+          </span>
+
+        </div>
+
+
+        <div class="menu-item-small">
+
+          <strong>
+            Crab Bruschetta
+          </strong>
+
+          <span>
+            Lump crab on toasted artisan crostini
+            with lemon and fresh herbs.
+          </span>
+
+        </div>
+
+
+        <div class="menu-item-small">
+
+          <strong>
+            Bacon-Wrapped Shrimp
+          </strong>
+
+          <span>
+            Roasted shrimp wrapped in crisp bacon
+            with a sweet chili glaze.
+          </span>
+
+        </div>
+
+
+        <div class="menu-item-small">
+
+          <strong>
+            Tuna Tartare on Savory Scone
+          </strong>
+
+          <span>
+            Fresh tuna tartare with sesame, chives,
+            and spicy aioli.
+          </span>
+
+        </div>
+
+
+        <div class="menu-item-small">
+
+          <strong>
+            Cucumber &amp; Smoked Salmon Roll
+          </strong>
+
+          <span>
+            Crisp cucumber, smoked salmon,
+            herbed cream cheese, and dill.
+          </span>
+
+        </div>
+
+
+        <div class="menu-item-small">
+
+          <strong>
+            Cucumber Cup with Roasted Duck
+          </strong>
+
+          <span>
+            Roasted duck, hoisin glaze,
+            scallions, and fresh herbs.
+          </span>
+
+        </div>
+
+
+        <div class="menu-item-small">
+
+          <strong>
+            Beef Tartare Phyllo Cup
+          </strong>
+
+          <span>
+            Hand-cut beef tartare with Dijon,
+            shallots, capers, and chives.
+          </span>
+
+        </div>
+
+
+        <div class="menu-item-small">
+
+          <strong>
+            Crispy Rice with Tuna Tartare
+          </strong>
+
+          <span>
+            Tuna tartare, jalapeño, sesame,
+            and spicy aioli.
+          </span>
+
+        </div>
+
+
+        <div class="menu-item-small">
+
+          <strong>
+            Gnocchi Cups
+          </strong>
+
+          <span>
+            Petite gnocchi with brown butter,
+            Parmesan, crispy sage, and fresh herbs.
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- FLORALS -->
+
+      <div class="special-menu-group">
+
+        <h3>
+          Holiday Florals
+        </h3>
+
+        <p>
+          A seasonal floral arrangement designed to complement
+          the caviar presentation and bring the entire holiday
+          table together.
+        </p>
+
+      </div>
+
+
+
+      <!-- INQUIRY BUTTON -->
+
+      <a
+        href="index.html#inquiry"
+        class="holiday-button"
+      >
+        Request This Experience
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CAVIAR & CHAMPAGNE FLORAL WORKSHOP
+===================================================== -->
+
+<section class="workshop-section">
+
+  <div class="workshop-layout">
+
+
+    <!-- WORKSHOP CONTENT -->
+
+    <div class="workshop-content">
+
+      <p class="section-kicker">
+        Holiday Workshop
+      </p>
+
+      <h2>
+        Caviar &amp;<br>
+        Champagne<br>
+        Floral Workshop
+      </h2>
+
+
+      <p class="workshop-intro">
+        Flowers, caviar, champagne, and an evening
+        created around the art of gathering.
+      </p>
+
+
+      <p class="workshop-description">
+        Join Amor Fati Events for a holiday flower arrangement
+        workshop accompanied by caviar and champagne.
+        Create your own seasonal floral arrangement while
+        enjoying an elevated holiday experience in a beautifully
+        styled setting.
+      </p>
+
+
+      <!-- EVENTBRITE BUTTON -->
+
+      <a
+        href="https://www.eventbrite.com/e/holiday-flower-arrangement-workshop-with-caviar-and-champagne-tickets-1998936129774?aff=oddtdtcreator"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="holiday-button"
+      >
+        Reserve Your Seat
+      </a>
+
+    </div>
+
+
+
+    <!-- WORKSHOP IMAGE -->
+
+    <div class="workshop-image">
+
+      <img
+        src="assets/images/workshop-holiday.jpg"
+        alt="Caviar and Champagne Holiday Flower Arrangement Workshop"
+      >
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL HOLIDAY CTA
+===================================================== -->
+
+<section class="holiday-cta">
+
+  <p class="section-kicker">
+    Holiday Entertaining
+  </p>
+
+  <h2>
+    Make the gathering part of the celebration.
+  </h2>
+
+  <p>
+    Planning a private holiday dinner, cocktail party,
+    or seasonal celebration? Tell us what you have in mind.
+  </p>
+
+  <a
+    href="index.html#inquiry"
+    class="holiday-button"
+  >
+    Begin Planning
+  </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+  <p class="brand">
+    Amor Fati
+  </p>
+
+  <p class="footer-links">
+    <a href="catering.html">Catering</a>
+    ·
+    <a href="styling.html">Styling</a>
+    ·
+    <a href="florals.html">Florals</a>
+    ·
+    <a href="rentals.html">Rentals</a>
+    ·
+    <a href="caviar.html">Caviar Service</a>
+    ·
+    <a href="holiday.html">Holiday Specials</a>
+  </p>
+
+  <p class="small">
+    Washington State
+  </p>
+
+</footer>
+
+
+<!-- =====================================================
+     HEADER SCROLL EFFECT
+===================================================== -->
+
+<script>
+
+  const header = document.getElementById("header");
+
+  window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 50) {
+
+      header.classList.add("scrolled");
+
+    } else {
+
+      header.classList.remove("scrolled");
+
+    }
+
+  });
+
+</script>
 
 
 </body>
